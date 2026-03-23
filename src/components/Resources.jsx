@@ -34,7 +34,7 @@ const Resources = () => {
                 </div>
 
                 {/* Azota Classrooms */}
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-16">
                     {/* Lớp Toán 6 */}
                     <motion.a 
                         href="https://azota.vn/vi/student/join-classroom/034thw" 
@@ -55,8 +55,33 @@ const Resources = () => {
                                 Nền tảng Toán cấp 2 từ con số 0. Tổng hợp bài giảng, bài tập trắc nghiệm và tự luận được biên soạn kỹ lưỡng để củng cố gốc rễ kiến thức vững vàng.
                             </p>
                         </div>
-                        <div className="inline-flex items-center font-bold text-blue-600 group-hover:gap-3 transition-all">
-                            Tham gia Lớp Azota <ArrowRight className="w-5 h-5 ml-1" />
+                        <div className="inline-flex items-center font-bold text-blue-600 group-hover:gap-3 transition-all text-sm md:text-base">
+                            Tham gia Lớp <ArrowRight className="w-5 h-5 ml-1" />
+                        </div>
+                    </motion.a>
+
+                    {/* Lớp Toán 7 */}
+                    <motion.a 
+                        href="https://azota.vn/vi/student/join-classroom/cm9j9v?gidzl=juwS6pe3302mb9iVEHaF3xQNaHucIr80_iN6JN8TM5RxbyPB81nK0ggInayc7m9U_PUJ4ZY-kQOeEWOC10" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="bg-white rounded-3xl p-6 lg:p-8 shadow-xl border-2 border-brand-yellow/30 hover:border-green-500 hover:shadow-green-500/20 transition-all duration-300 group flex flex-col justify-between"
+                    >
+                        <div>
+                            <div className="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                                <BookOpen className="w-7 h-7" />
+                            </div>
+                            <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">Lớp Toán Học Phát Triển (Lớp 7)</h3>
+                            <p className="text-gray-600 mb-6 text-sm lg:text-base">
+                                Nâng tầm tư duy Đại số và Hình học. Hệ thống hóa bài giảng và bài tập rèn luyện kỹ năng giải quyết các dạng toán đa dạng.
+                            </p>
+                        </div>
+                        <div className="inline-flex items-center font-bold text-green-600 group-hover:gap-3 transition-all text-sm md:text-base">
+                            Tham gia Lớp <ArrowRight className="w-5 h-5 ml-1" />
                         </div>
                     </motion.a>
 
@@ -80,8 +105,8 @@ const Resources = () => {
                                 Kho đề thi khổng lồ, bám sát cấu trúc của Bộ GDĐT. Bộ bí kíp giải nhanh, mẹo tư duy giúp các sĩ tử tự tin băng qua cánh cổng Đại Học sắp tới.
                             </p>
                         </div>
-                        <div className="inline-flex items-center font-bold text-brand-red group-hover:gap-3 transition-all">
-                            Vào Phòng Thi Thử <ArrowRight className="w-5 h-5 ml-1" />
+                        <div className="inline-flex items-center font-bold text-brand-red group-hover:gap-3 transition-all text-sm md:text-base">
+                            Vào Phòng Thi <ArrowRight className="w-5 h-5 ml-1" />
                         </div>
                     </motion.a>
                 </div>
