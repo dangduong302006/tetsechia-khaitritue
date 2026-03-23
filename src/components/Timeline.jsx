@@ -1,37 +1,54 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar, Clock, Users } from 'lucide-react';
 
 const Timeline = () => {
     const events = [
         {
-            day: "Mùng 1 Tết",
-            time: "Giờ Thìn (7h - 9h) | Giờ Thân (15h - 17h)",
-            description: "Khởi hành chuyến đi đầu năm, trao tặng lì xì sách và phần quà học tập tại các điểm trường khó khăn.",
+            day: "Tiền Sự Kiện",
+            time: "15:55 - 16:40",
+            description: "Công tác chuẩn bị hậu cần, kỹ thuật và chạy thử sự kiện.",
+            tasks: [
+                { role: "Setup & Hậu cần", detail: "Minh Thành, Vũ Hùng chuyển đồ, setup sân khấu. Hải Yến, Đức Dương bảo quản quà." },
+                { role: "Kỹ thuật & MC", detail: "Đình Hoàng chuẩn bị âm thanh, máy chiếu. Hồng Quân trực cánh gà duyệt kịch bản MC." }
+            ],
             color: "bg-red-500",
             borderColor: "border-red-500",
             textColor: "text-red-600"
         },
         {
-            day: "Mùng 2 Tết",
-            time: "Giờ Tỵ (9h - 11h) | Giờ Mùi (13h - 15h)",
-            description: "Tổ chức hoạt động 'Đọc sách ngày xuân' cùng các em nhỏ, giáo dục kỹ năng sống qua những trang sách.",
+            day: "Khai Mạc & Giao Lưu",
+            time: "16:40 - 16:52",
+            description: "Tập trung học sinh tại sân trường, đại diện dự án phát biểu và Lễ trao quà Khai Trí Tuệ.",
+            tasks: [
+                { role: "Điều phối", detail: "Công Tú, Xuân Thịnh ổn định chỗ ngồi. Minh Thành, Vũ Hùng hỗ trợ giám sát phía dưới." },
+                { role: "Truyền thông", detail: "Hải Yến phụ trách chụp ảnh trước sân D và quay phim, phỏng vấn sự kiện (phòng D201)." }
+            ],
             color: "bg-orange-500",
             borderColor: "border-orange-500",
             textColor: "text-orange-600"
         },
         {
-            day: "Mùng 3 Tết",
-            time: "Giờ Thìn (7h - 9h)",
-            description: "Giao lưu văn nghệ, trao quà cho những hoàn cảnh đặc biệt tại các trung tâm bảo trợ xã hội.",
+            day: "Phong Vị Tết Việt",
+            time: "16:52 - 17:20",
+            description: "Học sinh tham gia 5 chủ đề trò chơi văn hóa: Lì xì, Bánh chưng, Dọn nhà, Xông đất, Đi chùa.",
+            tasks: [
+                { role: "Hỗ trợ Trò chơi", detail: "Hồng Quân phát thẻ, giúp MC xếp chỗ cho 4 đội thi." },
+                { role: "Nhân sự năng động", detail: "Công Tú, Xuân Thịnh chủ động xuống rủ và mời thêm học sinh tham gia." },
+                { role: "Chạy phát sinh", detail: "Đức Dương chạy theo sát Lead để xử lý lập tức các vấn đề nhỏ nhặt." }
+            ],
             color: "bg-amber-500",
             borderColor: "border-amber-500",
             textColor: "text-amber-600"
         },
         {
-            day: "Mùng 4 Tết",
-            time: "Giờ Tỵ (9h - 11h) | Giờ Dậu (17h - 19h)",
-            description: "Tổng kết chiến dịch, trao bằng khen cho các cá nhân lan tỏa nhiều giá trị tích cực và lên kế hoạch dài hạn.",
+            day: "Bế Mạc & Hậu Sự Kiện",
+            time: "17:20 - 17:30",
+            description: "Tổng kết, đại diện lên cảm ơn BGH nhà trường và giải tán khu vực sân.",
+            tasks: [
+                { role: "Trao thưởng", detail: "MC dẫn dắt trao quà đội thắng cuộc (Hồng Quân hỗ trợ chuẩn bị quà)." },
+                { role: "Back up", detail: "Toàn bộ thành viên trong nhóm cùng chung tay dọn dẹp và xử lý hậu chương trình." }
+            ],
             color: "bg-brand-red",
             borderColor: "border-brand-red",
             textColor: "text-brand-red"
@@ -45,7 +62,7 @@ const Timeline = () => {
                     <h2 className="text-3xl md:text-5xl mb-4 text-brand-dark">Lịch Trình Hoạt Động</h2>
                     <div className="w-24 h-1 bg-brand-red mx-auto rounded-full mb-8"></div>
                     <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                        Hành trình "Tết Sẻ Chia - Khai Trí Tuệ" trải dài xuyên suốt những ngày đầu năm mới.
+                        Chi tiết lịch trình các hoạt động và sự kiện ý nghĩa sẽ diễn ra tại trường THCS Thái Thịnh.
                     </p>
                 </div>
 
@@ -90,6 +107,20 @@ const Timeline = () => {
                                         <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                                             {event.description}
                                         </p>
+
+                                        {event.tasks && event.tasks.length > 0 && (
+                                            <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
+                                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1 mb-3">
+                                                    <Users className="w-3 h-3" /> Bố trí nhân sự Team
+                                                </h4>
+                                                {event.tasks.map((task, idx) => (
+                                                    <div key={idx} className="bg-gray-50/80 hover:bg-white rounded-lg p-3 text-sm border border-gray-100 transition-colors">
+                                                        <span className={`font-bold block mb-1 ${event.textColor}`}>{task.role}</span>
+                                                        <span className="text-gray-600">{task.detail}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>

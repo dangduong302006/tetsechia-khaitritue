@@ -4,11 +4,17 @@ import { BookOpen, Send, Sparkles } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-brand-peach/30 via-brand-light to-brand-yellow/20">
+        <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            
+            {/* Background Image Setup */}
+            <div className="absolute inset-0 z-0">
+                <img src="/images/ảnh nền.jpg" alt="Tết Sẻ Chia" className="w-full h-full object-cover object-center opacity-40 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-brand-peach/50 to-brand-yellow/60"></div>
+            </div>
 
             {/* Decorative background elements */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-brand-orange/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-64 h-64 bg-brand-peach/30 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 bg-brand-orange/40 rounded-full blur-3xl z-0"></div>
+            <div className="absolute bottom-20 right-10 w-64 h-64 bg-brand-red/20 rounded-full blur-3xl z-0"></div>
 
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
 
@@ -28,8 +34,8 @@ const Hero = () => {
                         Tết Sẻ Chia <br /> Khai Trí Tuệ
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
-                        Góp thêm một cuốn sách, mang thêm một nụ cười. Cùng lan tỏa tri thức và hơi ấm mùa xuân đến với những trẻ em kém may mắn.
+                    <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0 font-medium">
+                        "Trao Tết yêu thương – Khai nguồn trí tuệ."
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -55,7 +61,7 @@ const Hero = () => {
                         {/* Main graphic container */}
                         <div className="relative w-full h-full bg-brand-yellow/30 backdrop-blur-sm rounded-full border-[6px] border-brand-red/80 shadow-2xl flex items-center justify-center overflow-hidden p-4 group hover:scale-105 transition-transform duration-500">
                             <div className="w-full h-full rounded-full overflow-hidden shadow-inner bg-brand-light flex items-center justify-center">
-                                <img src="/logo.png" alt="Tết Sẻ Chia" className="w-[105%] h-[105%] object-cover object-center group-hover:scale-110 transition-transform duration-700" />
+                                <img src="/images/logo.jpg" alt="Tết Sẻ Chia" className="w-[105%] h-[105%] object-cover object-center group-hover:scale-110 transition-transform duration-700" />
                             </div>
                         </div>
 

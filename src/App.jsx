@@ -2,7 +2,12 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Team from './components/Team';
 import Timeline from './components/Timeline';
+import Gallery from './components/Gallery';
+import FacebookStats from './components/FacebookStats';
+import Finances from './components/Finances';
+import Resources from './components/Resources';
 import Contact from './components/Contact';
 
 function App() {
@@ -12,7 +17,12 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Team />
         <Timeline />
+        <Gallery />
+        <FacebookStats />
+        <Finances />
+        <Resources />
       </main>
       <Contact />
 

@@ -17,15 +17,18 @@ const Header = () => {
     const navLinks = [
         { name: 'Trang chủ', href: '#home' },
         { name: 'Về dự án', href: '#about' },
-        { name: 'Hoạt động', href: '#timeline' },
+        { name: 'Lịch trình', href: '#timeline' },
+        { name: 'Thư viện', href: '#gallery' },
+        { name: 'Tài chính', href: '#finances' },
+        { name: 'Tài nguyên', href: '#resources' },
         { name: 'Liên hệ', href: '#contact' },
     ];
 
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#home" className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
-                    <img src="/logo.png" alt="Tết Sẻ Chia" className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-full shadow-sm hover:scale-105 transition-transform" />
+                <a href="#home" className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 group">
+                    <img src="/images/logo.jpg" alt="Tết Sẻ Chia" className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-full shadow-sm group-hover:scale-110 transition-transform" />
                     <span className="font-display font-bold text-xl md:text-2xl text-brand-dark hidden sm:block">Khai Trí Tuệ</span>
                 </a>
 
