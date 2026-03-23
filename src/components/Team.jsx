@@ -119,7 +119,7 @@ const Team = () => {
                 </div>
 
                 {/* Other Members Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+                <div className="flex flex-wrap justify-center gap-6 md:gap-8 max-w-5xl mx-auto">
                     {members.map((member, index) => (
                         <motion.div
                             key={member.id}
@@ -127,7 +127,7 @@ const Team = () => {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100 }}
-                            className="group relative flex flex-col items-center cursor-pointer"
+                            className="group relative flex flex-col items-center cursor-pointer w-[45%] md:w-[30%] lg:w-[22%]"
                             onClick={() => setSelectedMember(member)}
                         >
                             <div className="w-full aspect-[3/4] relative rounded-3xl overflow-hidden shadow-lg border-[4px] border-white group-hover:border-brand-yellow transition-colors duration-500 hover:shadow-2xl hover:-translate-y-2">

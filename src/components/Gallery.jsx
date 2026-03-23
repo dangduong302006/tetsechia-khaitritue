@@ -22,6 +22,8 @@ const galleryData = [
             { src: "/images/ảnh hoạt động1.jpg", alt: "Hoạt động 2" },
             { src: "/images/ảnh hoạt động12.jpg", alt: "Hoạt động 3" },
             { src: "/images/hoạt động 256.jpg", alt: "Hoạt động 256" },
+            { src: "/images/trao quà 1.jpg", alt: "Trao quà 1" },
+            { src: "/images/trào quà 2.jpg", alt: "Trao quà 2" },
             { src: "/images/ảnh hoạt động2.jpg", alt: "Hoạt động 4" },
             { src: "/images/ảnh hoạt động3.jpg", alt: "Hoạt động 5" },
             { src: "/images/ảnh hoạt động122.jpg", alt: "Hoạt động 6" },
